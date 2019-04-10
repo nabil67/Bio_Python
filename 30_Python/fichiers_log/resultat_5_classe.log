@@ -1,0 +1,87 @@
+﻿
+Gradient Boosting Classifier:  0.55
+>>> Support vector machine(SVM):   0.65
+>>> Random Forest Classifier:      0.57
+K Nearest Neighbor Classifier: 0.58
+>>> >>> Logistic Regression:           0.57
+>>> 
+>>> print('Passive Aggressive Classifier:\n {}\n'.format(metrics.classification_report(y, stratified_cv(X, y, linear_model.PassiveAggressiveClassifier))));
+Passive Aggressive Classifier:
+              precision    recall  f1-score   support
+
+         c1       0.64      0.57      0.61       103
+         c2       0.42      0.44      0.43       127
+         c3       0.29      0.31      0.30       105
+         c4       0.46      0.55      0.50       188
+         c6       0.48      0.31      0.38       118
+
+avg / total       0.46      0.45      0.45       641
+
+
+>>> print('Gradient Boosting Classifier:\n {}\n'.format(metrics.classification_report(y, stratified_cv(X, y, ensemble.GradientBoostingClassifier))));
+print('Support vector machine(SVM):\n {}\n'.format(metrics.classification_report(y, stratified_cv(X, y, svm.SVC))));
+print('Random Forest Classifier:\n {}\n'.format(metrics.classification_report(y, stratified_cv(X, y, ensemble.RandomForestClassifier))));
+print('K Nearest Neighbor Classifier:\n {}\n'.format(metrics.classification_report(y, stratified_cv(X, y, neighbors.KNeighborsClassifier))));
+print('Logistic Regression:\n {}\n'.format(metrics.classification_report(y, stratified_cv(X, y, linear_model.LogisticRegression))));
+pass
+Gradient Boosting Classifier:
+              precision    recall  f1-score   support
+
+         c1       0.75      0.77      0.76       103
+         c2       0.62      0.67      0.64       127
+         c3       0.52      0.46      0.49       105
+         c4       0.55      0.59      0.57       188
+         c6       0.48      0.42      0.45       118
+
+avg / total       0.58      0.58      0.58       641
+
+
+>>> Support vector machine(SVM):
+              precision    recall  f1-score   support
+
+         c1       0.72      0.84      0.78       103
+         c2       0.62      0.67      0.64       127
+         c3       0.65      0.38      0.48       105
+         c4       0.59      0.81      0.69       188
+         c6       0.69      0.36      0.48       118
+
+avg / total       0.64      0.64      0.62       641
+
+
+>>> Random Forest Classifier:
+              precision    recall  f1-score   support
+
+         c1       0.71      0.81      0.75       103
+         c2       0.61      0.65      0.63       127
+         c3       0.51      0.44      0.47       105
+         c4       0.55      0.65      0.60       188
+         c6       0.53      0.35      0.42       118
+
+avg / total       0.58      0.59      0.58       641
+
+
+>>> K Nearest Neighbor Classifier:
+              precision    recall  f1-score   support
+
+         c1       0.66      0.74      0.70       103
+         c2       0.55      0.64      0.59       127
+         c3       0.47      0.34      0.40       105
+         c4       0.59      0.69      0.64       188
+         c6       0.61      0.44      0.51       118
+
+avg / total       0.58      0.58      0.58       641
+
+
+>>> Logistic Regression:
+              precision    recall  f1-score   support
+
+         c1       0.70      0.83      0.76       103
+         c2       0.57      0.65      0.61       127
+         c3       0.50      0.06      0.10       105
+         c4       0.54      0.82      0.65       188
+         c6       0.63      0.41      0.49       118
+
+avg / total       0.58      0.59      0.54       641
+
+
+>>> >>> 
